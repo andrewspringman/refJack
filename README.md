@@ -20,7 +20,7 @@ docker-compose up
 ```
 Then browse to
 
-- [http://localhost](http://localhost)
+- [http://website.localhost](http://localhost)
 - [http://app.localhost](http://app.localhost)
 - [http://blog.loclhost](http://blog.loclhost)
 - [http://localhost:8080/dashboard/](http://localhost:8080/dashboard/)
