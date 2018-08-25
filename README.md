@@ -22,3 +22,8 @@ Then browse to
 - [http://app.localhost](http://app.localhost)
 - [http://blog.loclhost](http://blog.loclhost)
 - [http://localhost:8080/dashboard/](http://localhost:8080/dashboard/)
+
+## Credits
+
+### Josh Fox
+[Josh Fox (Stack Exchange id CelticParser)](https://askubuntu.com/users/384425/celticparser) provides [a method for cloning a subtree of a repo](https://askubuntu.com/questions/460885/how-to-clone-git-repository-only-some-directories/729798#729798).
