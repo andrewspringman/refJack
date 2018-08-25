@@ -16,6 +16,7 @@ Then browse to
 http://localhost
 http://app.localhost
 http://blog.loclhost
+http://localhost:8080/dashboard/
 ```
 
 ## Credits
