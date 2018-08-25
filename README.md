@@ -28,7 +28,7 @@ I really enjoyed [Nicholas Kajoh's article on running multiple apps with Docker 
 [Sebastiaan van Stijn (GitHub user @thaJeztah)](https://github.com/thaJeztah) gives [the syntax for specifying a specific branch and subdirectory of a git repo as the build context](https://github.com/moby/moby/issues/7071#issuecomment-234306681).  A little testing shows that this works with the build command in a docker-compose.yml file as well.
 
 ### Rain
-[GitHub user @rainbreak](https://github.com/rainbreak) provides a method (in [this article](https://github.com/moby/moby/issues/14704)) for cloning a github repo directly into an image that prevents cloning if the branch hasn't changed.
+[GitHub user @rainbreak](https://github.com/rainbreak) provides [a method for cloning a github repo directly into an image that prevents cloning if the branch hasn't changed](https://github.com/moby/moby/issues/14704#issuecomment-215961707).
 
 ### Josh Fox
 [Josh Fox (Stack Exchange id CelticParser)](https://askubuntu.com/users/384425/celticparser) provides a method for cloning a subtree of a repo in [this StackExchange response](https://askubuntu.com/questions/460885/how-to-clone-git-repository-only-some-directories/729798#729798).
