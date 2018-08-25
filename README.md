@@ -1,5 +1,5 @@
 # Jumping Jack
-A project that demonstrates how to deploy directly from a single git repo to multipe images
+A project that demonstrates how to deploy directly from a single git repo to multiple images
 
 ## WARNING
 
