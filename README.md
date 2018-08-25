@@ -9,7 +9,7 @@ This example is for learning purposes only and is not appropriate for production
 
 Run
 ```shell
-curl -L -o /tmp/docker-compose.yml https://raw.githubusercontent.com/andrewspringman/jack/master/docker-compose.yml && docker-compose -f /tmp/docker-compose.yml up
+curl -L -o /tmp/docker-compose.yml https://raw.githubusercontent.com/andrewspringman/jumpingJack/master/docker-compose.yml && docker-compose -f /tmp/docker-compose.yml up
 ```
 Then browse to
 ```
