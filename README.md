@@ -9,8 +9,8 @@ This example is for learning purposes only and is not appropriate for production
 
 Run
 ```shell
-curl -L -o docker-compose.yml https://raw.githubusercontent.com/andrewspringman/jack/master/docker-compose.yml
- && docker-compose up
+curl -L -o /tmp/docker-compose.yml https://raw.githubusercontent.com/andrewspringman/jack/master/docker-compose.yml
+ && docker-compose up -f /tmp/docker-compose.yml
 ```
 Then browse to
 ```
