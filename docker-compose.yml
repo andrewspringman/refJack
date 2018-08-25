@@ -11,26 +11,23 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /dev/null:/traefik.toml
   app:
-    # Specify git repo branch and directory for build
-    build: https://github.com/andrewspringman/jumpingJack.git#master:app
-    volumes:
-      - ./app:/usr/share/nginx/html
+    build: 
+      context: .
+      dockerfile: appDockerfile
     labels:
       - "traefik.backend=app-be"
       - "traefik.frontend.rule=Host:app.localhost"
   blog:
-    # Specify git repo branch and directory for build
-    build: https://github.com/andrewspringman/jumpingJack.git#master:blog
-    volumes:
-      - ./blog:/usr/share/nginx/html
+    build: 
+      context: .
+      dockerfile: blogDockerfile
     labels:
       - "traefik.backend=blog-be"
       - "traefik.frontend.rule=Host:blog.localhost"
   website:
-    # Specify git repo branch and directory for build
-    build: https://github.com/andrewspringman/jumpingJack.git#master:website
-    volumes:
-      - ./website:/usr/share/nginx/html
+    build: 
+      context: .
+      dockerfile: websiteDockerfile
     labels:
       - "traefik.backend=website-be"
-      - "traefik.frontend.rule=Host:localhost"
+      - "traefik.frontend.rule=Host:website.localhost"

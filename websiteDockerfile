@@ -1,0 +1,8 @@
+FROM andrewspringman/nginx-alpine-git
+
+# Clone just the website directory
+# Move the website directory to where we are
+# Delete the excess files
+RUN git clone --depth 1 https://github.com/andrewspringman/jumpingJack website && \
+    mv website/website/* . && \
+    rm -r -f website
