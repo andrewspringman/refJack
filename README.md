@@ -31,7 +31,7 @@ I really enjoyed [Nicholas Kajoh's article on running multiple apps with Docker 
 [GitHub user @rainbreak](https://github.com/rainbreak) provides [a method for cloning a github repo directly into an image that prevents cloning if the branch hasn't changed](https://github.com/moby/moby/issues/14704#issuecomment-215961707).
 
 ### Josh Fox
-[Josh Fox (Stack Exchange id CelticParser)](https://askubuntu.com/users/384425/celticparser) provides a method for cloning a subtree of a repo in [this StackExchange response](https://askubuntu.com/questions/460885/how-to-clone-git-repository-only-some-directories/729798#729798).
+[Josh Fox (Stack Exchange id CelticParser)](https://askubuntu.com/users/384425/celticparser) provides [a method for cloning a subtree of a repo](https://askubuntu.com/questions/460885/how-to-clone-git-repository-only-some-directories/729798#729798).
 
 ### Joffrey F
 [Joffrey F (GitHub user shin-)](https://github.com/shin-) suggests [using curl to get just the docker-compose.yml file out of a git repo](https://github.com/docker/compose/pull/5441#issuecomment-365740221).  To get the url of the individual file, siply view it in raw mode in GitHub.  I'm using curl natively, but [he also reminds us](https://github.com/docker/compose/pull/5441#issuecomment-372503247) that we can always [run curl in docker](https://hub.docker.com/r/appropriate/curl/).
