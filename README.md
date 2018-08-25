@@ -1,17 +1,37 @@
-# Jack
-A project that demonstrates how to run multiple apps on one server using Docker and Traefik.
+# Jumping Jack
+A project that demonstrates how to deploy directly from a single git repo to multipe images
 
-## Dev setup
-- Clone/download this repo
-- Install Docker and Docker Compose
-- Run `docker-compose up` in project root
+## WARNING
 
-## Prod setup
-- Provision a server
-- Configure a domain (and sub-domains) for your server
-- Install Git
-- Fork and clone this repo
-- Install Docker and Docker Compose
-- Edit *docker-compose.prod.yml* and *traefik.toml* as appropriate (domain and email)
-- Create a *.htpasswd* file in */traefik* with credentials to access the Traefik dashboard
-- Run `docker-compose -f docker-compose.prod.yml up --build -d` in project root
+This example is for learning purposes only and is not appropriate for production.  See [Jack](https://github.com/nicholaskajoh/jack) for details how to add security and deploy in production.
+
+## Try it
+
+Run
+```shell
+curl -L -o docker-compose.yml https://raw.githubusercontent.com/andrewspringman/jack/master/docker-compose.yml
+ && docker-compose up
+```
+Then browse to
+```
+http://localhost
+http://app.localhost
+http://blog.loclhost
+```
+
+## Credits
+
+### Nicholas Kajoh
+I really enjoyed [Nicholas Kajoh's article on running multiple apps with Docker and Traefik](https://medium.com/@nicholaskajoh/how-to-run-multiple-apps-on-one-server-using-docker-and-traefik-de3f6a5ddb4c).  He provides [a github repo of the project](https://github.com/nicholaskajoh/jack).  It provides a great starting point for learning Docker and Traefik.  This is a fork of [that repo](https://github.com/nicholaskajoh/jack).
+
+### Sebastiaan van Stijn
+[Sebastiaan van Stijn (GitHub user @thaJeztah)](https://github.com/thaJeztah) gives [the syntax for specifying a specific branch and subdirectory of a git repo as the build context](https://github.com/moby/moby/issues/7071#issuecomment-234306681).  A little testing shows that this works with the build command in a docker-compose.yml file as well.
+
+### Rain
+[GitHub user @rainbreak](https://github.com/rainbreak) provides a method (in [this article](https://github.com/moby/moby/issues/14704)) for cloning a github repo directly into an image that prevents cloning if the branch hasn't changed.
+
+### Josh Fox
+[Josh Fox (Stack Exchange id CelticParser)](https://askubuntu.com/users/384425/celticparser) provides a method for cloning a subtree of a repo in [this StackExchange response](https://askubuntu.com/questions/460885/how-to-clone-git-repository-only-some-directories/729798#729798).
+
+### Joffrey F
+[Joffrey F (GitHub user shin-)](https://github.com/shin-) suggests [using curl to get just the docker-compose.yml file out of a git repo] (https://github.com/docker/compose/pull/5441#issuecomment-365740221).  To get the url of the individual file, siply view it in raw mode in GitHub.  I'm using curl natively, but [he also reminds us](https://github.com/docker/compose/pull/5441#issuecomment-372503247) that we can always [run curl in docker](https://hub.docker.com/r/appropriate/curl/).
