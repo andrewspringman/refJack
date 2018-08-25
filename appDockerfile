@@ -3,6 +3,6 @@ FROM andrewspringman/nginx-alpine-git
 # Clone just the app directory
 # Move the app directory to where we are
 # Delete the excess files
-RUN git clone --depth 1 https://github.com/andrewspringman/jumpingJack app && \
+RUN git clone --depth 1 https://github.com/nicholaskajoh/jack.git app && \
     mv app/app/* . && \
     rm -r -f app

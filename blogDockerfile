@@ -3,6 +3,6 @@ FROM andrewspringman/nginx-alpine-git
 # Clone just the blog directory
 # Move the blog directory to where we are
 # Delete the excess files
-RUN git clone --depth 1 https://github.com/andrewspringman/jumpingJack blog && \
+RUN git clone --depth 1 https://github.com/nicholaskajoh/jack.git blog && \
     mv blog/blog/* . && \
     rm -r -f blog
