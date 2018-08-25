@@ -12,12 +12,24 @@ Run
 curl -L -o /tmp/docker-compose.yml https://raw.githubusercontent.com/andrewspringman/jumpingJack/master/docker-compose.yml && docker-compose -f /tmp/docker-compose.yml up
 ```
 Then browse to
-```
-http://localhost
-http://app.localhost
-http://blog.loclhost
-http://localhost:8080/dashboard/
-```
+
+- [http://localhost](http://localhost)
+- [http://app.localhost](http://app.localhost)
+- [http://blog.loclhost](http://blog.loclhost)
+- [http://localhost:8080/dashboard/](http://localhost:8080/dashboard/)
+
+## Explanation
+
+This makes for a very clean deployment directly out of a single git repo, even if you are using multiple containers.  The only file downloaded is docker-compose.yml, and that into tmp.  Everything else goes directly into the images.
+
+Besides deleting some stuff and writing this README, these are the files that were changed.  See the comments in those files for more detail.
+
+- [docker_compose.yml](https://github.com/andrewspringman/jumpingJack/blob/master/docker-compose.yml)
+- [app/Dockerfile](https://github.com/andrewspringman/jumpingJack/blob/master/app/Dockerfile)
+- [blog/Dockerfile](https://github.com/andrewspringman/jumpingJack/blob/master/blog/Dockerfile)
+- [website/Dockerfile](https://github.com/andrewspringman/jumpingJack/blob/master/website/Dockerfile)
+
+The command in the Try It section above shows how to get just the docker-compose.yml file and deploy it.  To get the url of an  individual file, simply view it in raw mode in GitHub.
 
 ## Credits
 
@@ -34,4 +46,4 @@ I really enjoyed [Nicholas Kajoh's article on running multiple apps with Docker 
 [Josh Fox (Stack Exchange id CelticParser)](https://askubuntu.com/users/384425/celticparser) provides [a method for cloning a subtree of a repo](https://askubuntu.com/questions/460885/how-to-clone-git-repository-only-some-directories/729798#729798).
 
 ### Joffrey F
-[Joffrey F (GitHub user shin-)](https://github.com/shin-) suggests [using curl to get just the docker-compose.yml file out of a git repo](https://github.com/docker/compose/pull/5441#issuecomment-365740221).  To get the url of the individual file, siply view it in raw mode in GitHub.  I'm using curl natively, but [he also reminds us](https://github.com/docker/compose/pull/5441#issuecomment-372503247) that we can always [run curl in docker](https://hub.docker.com/r/appropriate/curl/).
+[Joffrey F (GitHub user shin-)](https://github.com/shin-) suggests [using curl to get just the docker-compose.yml file out of a git repo](https://github.com/docker/compose/pull/5441#issuecomment-365740221).  I'm using curl natively, but [he also reminds us](https://github.com/docker/compose/pull/5441#issuecomment-372503247) that we can always [run curl in docker](https://hub.docker.com/r/appropriate/curl/).
